@@ -1,0 +1,35 @@
+[project]
+name = "uptime-kuma-send"
+version = "0.1.0"
+description = "Send heartbeat to uptime kuma."
+authors = [
+    {name = "overgodofchaos", email = "vezonzzzzzz@gmail.com"}
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = "~=3.12"
+keywords = [
+    "key", "key2", "key3"
+]
+
+dependencies = [
+]
+
+packages = [
+    { include = "uptime_kuma_send", from = "src" }
+]
+
+[project.urls]
+Homepage = "https://github.com/username/uptime-kuma-send"
+Documentation = "https://uptime-kuma-send.readthedocs.io"
+Repository = "https://github.com/username/uptime-kuma-send"
+
+[project.scripts]
+uptime-kuma-send = "uptime_kuma_send:main"
+
+[build-system]
+requires = ["uv_build>=0.9.9,<2.0.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true
