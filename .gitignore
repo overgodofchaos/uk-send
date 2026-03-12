@@ -1,3 +1,5 @@
+temp*.py
+
 # Bite-code and cache
 *__pycache*
 *.py[cod]

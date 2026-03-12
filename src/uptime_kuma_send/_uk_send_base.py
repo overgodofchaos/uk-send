@@ -6,9 +6,7 @@ from importlib.util import find_spec
 from typing import Literal, Protocol
 from urllib import parse
 
-from ._uk_send_httpx import send as send_httpx
-from ._uk_send_requests import send as send_requests
-from ._uk_send_urllib import send as send_urllib
+from ._log import log
 
 
 class SendFunction(Protocol):
@@ -96,20 +94,27 @@ def _get_send_function(proxy: str | None) -> SendFunction:
     lib = _choice_lib(proxy)
 
     if lib == LibChoised.httpx:
+        from ._uk_send_httpx import send as send_httpx  # noqa: PLC0415
+        log(f"send function: {"httpx"}")
         return send_httpx
     if lib == LibChoised.requests:
+        from ._uk_send_requests import send as send_requests  # noqa: PLC0415
+        log(f"send function: {"requests}"}")
         return send_requests
 
+    from ._uk_send_urllib import send as send_urllib  # noqa: PLC0415
+    log(f"send function: {"urllib"}")
     return send_urllib
 
 
-def send_heartbeat(  # noqa: PLR0913
+def send(  # noqa: PLR0913
         msg: str = "",
         status: Literal["up", "down"] | None = None,
         ping: int | None = None,
         url: str | None = None,
         proxy: str | None = None,
         timeout: int = 5,
+        thread: bool = True,
 ) -> None:
 
     url = url if url else os.getenv("UK_URL", None)
@@ -118,7 +123,12 @@ def send_heartbeat(  # noqa: PLR0913
 
     url, params_base = _parse_url(url)
 
+    log(f"url {url}")
+    log(f"params_base: {params_base}")
+
     proxy = proxy if proxy else os.getenv("UK_PROXY", None)
+
+    log(proxy)
 
     send_function = _get_send_function(proxy)
 
@@ -148,7 +158,9 @@ def send_heartbeat(  # noqa: PLR0913
         "ping": ping,
     }
 
-    def send() -> None:
+    log(f"params: {params}")
+
+    def send_() -> None:
         send_function(
             url=url,
             params=params,
@@ -156,5 +168,8 @@ def send_heartbeat(  # noqa: PLR0913
             timeout=timeout,
         )
 
-    t = threading.Thread(target=send)
-    t.start()
+    if thread:
+        t = threading.Thread(target=send_)
+        t.start()
+    else:
+        send_()
