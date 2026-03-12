@@ -1,6 +1,6 @@
 [project]
 name = "uk-send"
-version = "0.1.7"
+version = "0.1.8"
 description = "Send heartbeat to uptime kuma."
 authors = [
     {name = "overgodofchaos", email = "vezonzzzzzz@gmail.com"}
