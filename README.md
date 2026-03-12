@@ -1,6 +1,6 @@
 # uk-send
 ___
-Send heartbeat to [uptime kuma](https://github.com/louislam/uptime-kuma).
+Send a heartbeat to [uptime kuma](https://github.com/louislam/uptime-kuma) in a separate thread without blocking the main program.
 
 ## Examples:
 ### Base usage
