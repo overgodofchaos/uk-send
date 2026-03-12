@@ -12,7 +12,7 @@ keywords = [
     "uptime-kuma", "python", "tracking", "ping"
 ]
 classifiers = [
-    "Operation System :: OS Independent"
+    "Platform :: OS Independent"
 ]
 
 dependencies = [
