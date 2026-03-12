@@ -23,9 +23,9 @@ packages = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/username/uk-send"
-Documentation = "https://uk-send.readthedocs.io"
-Repository = "https://github.com/username/uk-send"
+Homepage = "https://github.com/overgodofchaos/uk-send"
+Documentation = "https://github.com/overgodofchaos/uk-send"
+Repository = "https://github.com/overgodofchaos/uk-send"
 
 [project.optional-dependencies]
 requests = [
