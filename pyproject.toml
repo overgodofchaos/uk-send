@@ -1,6 +1,6 @@
 [project]
 name = "uptime-kuma-send"
-version = "0.1.0"
+version = "0.1.1"
 description = "Send heartbeat to uptime kuma."
 authors = [
     {name = "overgodofchaos", email = "vezonzzzzzz@gmail.com"}
@@ -54,7 +54,7 @@ dev = [
 ]
 requests = []
 
-[tool.hatch.build]
-include = [
-    "src/uk/py.typed"
-]
+#[tool.hatch.build]
+#include = [
+#    "src/uk/py.typed"
+#]
