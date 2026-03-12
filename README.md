@@ -7,7 +7,7 @@ Send a heartbeat to [uptime kuma](https://github.com/louislam/uptime-kuma) in a 
 ```python
 import uk_send as uk
 
-url = "https://uk.example.xom/api/push/YhYAt5t6qiRJ60b16g8326vAGYQw7Ty0"
+url = "https://uk.example.com/api/push/YhYAt5t6qiRJ60b16g8326vAGYQw7Ty0"
 
 uk.send("test message", url=url)
 ```
