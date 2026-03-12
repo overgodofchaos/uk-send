@@ -13,7 +13,7 @@ uk.send("test message", url=url)
 ```
 ### Env usage
 ```
-UK_URL="https://uk.example.xom/api/push/YhYAt5t6qiRJ60b16g8326vAGYQw7Ty0"
+UK_URL="https://uk.example.com/api/push/YhYAt5t6qiRJ60b16g8326vAGYQw7Ty0"
 UK_PROXY="http://127.0.0.1:1080"
 ```
 ```python
