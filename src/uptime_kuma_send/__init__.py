@@ -1,5 +1,5 @@
-from .main import main
+from uk import send
 
 __all__ = [
-    "main"
+    "send",
 ]
