@@ -128,7 +128,7 @@ def send(  # noqa: PLR0913
 
     proxy = proxy if proxy else os.getenv("UK_PROXY", None)
 
-    log(proxy)
+    log(f"proxy: {proxy}")
 
     send_function = _get_send_function(proxy)
 
