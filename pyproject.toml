@@ -1,5 +1,5 @@
 [project]
-name = "uptime-kuma-send"
+name = "uk-send"
 version = "0.1.6"
 description = "Send heartbeat to uptime kuma."
 authors = [
@@ -9,14 +9,17 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10.0,<4.0.0"
 keywords = [
-    "key", "key2", "key3"
+    "uptime-kuma", "python", "tracking", "ping"
+]
+classifiers = [
+    "Operation System :: OS Independent"
 ]
 
 dependencies = [
 ]
 
 packages = [
-    { include = "uptime_kuma_send", from = "src" }
+    { include = "uk_send", from = "src" }
 ]
 
 [project.urls]

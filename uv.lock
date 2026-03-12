@@ -272,7 +272,7 @@ wheels = [
 ]
 
 [[package]]
-name = "uptime-kuma-send"
+name = "uk-send"
 version = "0.1.6"
 source = { editable = "." }
 

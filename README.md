@@ -3,3 +3,5 @@ ___
 Send heartbeat to uptime kuma.
 
 
+Options:
+- uptime-kuma-send
