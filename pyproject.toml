@@ -51,10 +51,6 @@ dev = [
     "ruff>=0.15.5",
 ]
 
-all = [
-    "requests[socks]>=2.32.5",
-    "httpx[socks]>=0.28.1",
-]
 requests = []
 
 #[tool.hatch.build]
