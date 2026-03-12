@@ -1,6 +1,6 @@
-# uptime-kuma-send
+# uk-send
 ___
-Send heartbeat to uptime kuma.
+Send heartbeat to [uptime kuma](https://github.com/louislam/uptime-kuma).
 
 ## Examples:
 ### Base usage
