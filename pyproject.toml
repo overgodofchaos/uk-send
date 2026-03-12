@@ -55,8 +55,3 @@ dev = [
 ]
 
 requests = []
-
-#[tool.hatch.build]
-#include = [
-#    "src/uk/py.typed"
-#]
