@@ -132,7 +132,9 @@ def send(  # noqa: PLR0913
 
     send_function = _get_send_function(proxy)
 
-    if not ping:
+    log(f"msg: {msg}, ping: {ping}, status: {status}")
+
+    if not ping and ping != 0:
         if params_base.get("ping"):  # noqa: SIM108
             ping = int(params_base["ping"])
         else:
@@ -151,6 +153,8 @@ def send(  # noqa: PLR0913
                 status = "up"
         else:
             status = "up"
+
+    log(f"msg: {msg}, ping: {ping}, status: {status}")
 
     params = {
         "status": status,
